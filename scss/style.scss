@@ -1,0 +1,453 @@
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Work Sans', sans-serif;
+   h1, h2, h3, h4 {
+      font-family: 'Quicksand', sans-serif;
+   }
+   h2 { font-size: 60px; font-weight: bold; }
+   h3 { font-size: 40px; font-weight: bold; }
+   h4 { font-size: 22px; font-weight: bold; }
+   p, span, a {
+      font-size: 16px;
+      font-weight: 400;
+      color: #333;
+   }
+   .fa {
+      font-size: 40px;
+   }
+   .btn {
+      background: #2196f3;
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 3px;
+   }
+   .btn:hover {
+      background: #898989;
+      color: #fff;
+   }
+}
+body {
+   background: #f8f9fa;
+}
+
+/*-- NAVIGRATION --*/
+#navigration {
+   #hamburger {
+      border-color: rgba(255, 255, 255, 0);
+      position: relative;
+      width: 30px;
+      height: 30px;
+      .icon {
+         position: absolute;
+         background: #fff;
+         width: 30px;
+         height: 3px;
+         top: 13px;
+         right: -1px;
+         transition: .4s;
+      }
+      .icon:before,
+      .icon:after {
+         content: "";
+         position: absolute;
+         width: 30px;
+         height: 3px;
+         background: #fff;
+         transition: .4s;
+         cursor: pointer;
+      }
+      .icon:before {
+         top: -10px;
+      }
+      .icon:after {
+         top: 10px;
+      }
+   }
+   #hamburger.active .icon {
+      background: none;
+   }
+   #hamburger.active .icon:before {
+      top: 0;
+      transform: rotate(135deg);
+   }
+   #hamburger.active .icon:after {
+      top: 0;
+      transform: rotate(-135deg);
+   }
+   #navbar {
+      transition: all .4s;
+      .nav-link {
+         font-size: 16px;
+         color: #fff;
+         transition: .4s;
+      }
+      .nav-link::before{
+         position: relative;
+         top: 30px;
+         content: "";
+         display: block;
+         width: 0;
+         opacity: 0;
+         height: 2px;
+         background: #fff;
+         transition: all .4s;
+      }
+      .nav-link.active::before,
+      .nav-link:hover::before {
+         width: 100%;
+         opacity: 1;
+      }
+   }
+}
+
+/*-- HOME SECTION --*/
+#homeSection {
+   background: url(../img/man-holding-teacup.jpg);
+   background-size: cover;
+   background-position: center;
+   .overlay {
+      background: rgba(0, 0, 0, .5);
+      padding: 250px 0px;
+      h2, p {
+         color: #fff;
+      }
+   }
+}
+
+/*-- ICON SECTION --*/
+#iconSection {
+   .icon-box {
+      background: #fff;
+      border-radius: 5px;
+      transition: .4s;
+      .icon {
+         .fa {
+            color: #2196f3;
+         }
+      }
+   }
+   .icon-box:hover {
+      background: #2196f3;
+      .icon {
+         .fa {
+            color: #fff;
+         }
+      }
+      h4, p {
+         color: #fff;
+      }
+   }
+}
+
+/*-- WORK SECTION --*/
+#workSection {
+   background: #2196f3;
+   .icon-box {
+      .icon {
+         .fa {
+            color: rgba(255, 255, 255, .4);
+            font-size: 60px
+         }
+      }
+      h2 span {
+         font-size: 60px;
+         color: #fff;
+         font-family: 'Quicksand', sans-serif;
+         font-weight: bold;
+      }
+      h2, p {
+         color: #fff;
+      }
+   }
+}
+
+/*-- SERVICE SECTION --*/
+#serviceSection {
+   .info-box {
+      .description {
+         .fa {
+            font-size: 16px;
+            margin-right: 10px;
+         }
+      }
+      h2 span {
+         font-size: 60px;
+         color: #fff;
+         font-family: 'Quicksand', sans-serif;
+         font-weight: 600;
+      }
+      h2, p {
+         color: #fff;
+      }
+   }
+   .video-box {
+      position: relative;
+      .icon {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         .fa {
+            color: #2196f3;
+            background: #fff;
+            font-size: 35px;
+            padding: 20px 25px;
+            border-radius: 90px;
+         }
+      }
+   }
+}
+
+/*-- BUSINESS SECTION --*/
+#businessSection {
+   background: url(../img/photo-of-people-near-wooden-table.jpg);
+   background-size: cover;
+   background-position: center;
+   .overlay {
+      background: rgba(0, 0, 0, .5);
+      padding-bottom: 170px;
+      h3, p {
+         color: #fff;
+      }
+   }
+}
+/*-- BUSINESS ICON SECTION --*/
+.icon-section {
+   margin-top: -170px;
+   .icon-box {
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 100px -50px;
+      .icon {
+         .fa {
+            color: #2196f3;
+         }
+      }
+      p {
+         color: #000;
+      }
+   }
+}
+
+/*-- TESTMONIAL SECTION --*/
+#testimonialSection {
+   .testimonial-box {
+      background: #fff;
+      border-radius: 5px;
+      .img-box {
+         img {
+            width: 80px;
+         }
+      }
+      .title {
+         span {
+            color: #2196f3;
+         }
+      }
+   }
+}
+
+/*-- TEAM SECTION --*/
+#teamSection {
+   .team-box {
+      position: relative;
+      box-shadow: 0px 0px 100px -75px;
+      border-radius: 5px;
+      .img-box {
+         img {
+            width: 200px;
+         }
+      }
+      .title {
+         span {
+            color: #2196f3;
+         }
+      }
+      .icon {
+         li {
+            .fa {
+               font-size: 20px;
+               padding: 12px;
+               background: #e5e5e5;
+               border-radius: 30px;
+               transition: .4s;
+            }
+            .fa:hover {
+               color: #2196f3;
+            }
+         }
+      }
+   }
+}
+
+/*-- BLOG SECTION --*/
+   #blogSection {
+   .news-box {
+      box-shadow: 0px 20px 100px -75px;
+      border-radius: 5px;
+      .img-box {
+         overflow: hidden;
+         border-bottom: 5px solid #2196f3;
+         transition: .4s;
+         img {
+            transition: .4s;
+         }
+      }
+      .title {
+         span {
+            color: #2196f3;
+            .fa {
+               font-size: 16px;
+            }
+         }
+      }
+      .btn {
+         padding: 5px 10px;
+         font-size: 12px;
+      }
+   }
+   .news-box:hover {
+      .img-box {
+         img {
+            transform: scale(1.05);
+         }
+      }
+   }
+}
+
+/*-- QUOTE SECTION --*/
+#quoteSection {
+   background: #2196f3;
+   h3, p {
+      color: #fff;
+   }
+   .btn {
+      border: 2px solid #fff;
+   }
+}
+
+/*-- FOOTER SECTION --*/
+#footerSection {
+   li {
+      .fa {
+         font-size: 25px;
+      }
+      .fa-facebook-square {
+         color: #4167b2;
+      }
+      .fa-instagram {
+         color: #ee4957;
+      }
+      .fa-twitter {
+         color: #1da1f3;
+      }
+   }
+}
+
+
+/*---------------------- ABOUT US PAGE ----------------------*/
+/*-- NAVIGRATION --*/
+.another-nav {
+   background: #2196f3;
+}
+/*-- SERVICE SECTION --*/
+.about-service {
+   padding-top: 150px;
+}
+
+/*---------------------- BLOG PAGE ----------------------*/
+/*-- SERVICE SECTION --*/
+.blogpage-blog {
+   padding-top: 150px;
+   .news-box {
+      .title {
+         span {
+            color: #000 !important;
+            font-size: 14px;
+            font-weight: 500;
+         }
+         .fa {
+            font-size: 14px;
+            color: #000;
+         }
+      }
+   }
+}
+/*---------------------- CONTACT PAGE ----------------------*/
+/*-- CONTACT HEADER --*/
+#contactHeader {
+   margin-top: 70px;
+   background: url(../img/map.jpg);
+   background-position: center top;
+   background-size: cover;
+   .overlay {
+      background: rgba(0, 0, 0, 0.2);
+      height: 600px;
+   }
+}
+
+/*-- CONTACT SECTION --*/
+#contactSection {
+   margin-top: -100px;
+   #contact-box {
+      border-radius: 5px;
+   }
+   .part1 {
+      background: #2196f3;
+      height: 100%;
+      .description {
+         .fa {
+            font-size: 20px;
+            margin-right: 10px;
+         }
+      }
+      .icon {
+         .fa {
+            font-size: 25px;
+            color: #fff;
+         }
+      }
+   }
+   .part2 {
+      background: #fff;
+      form {
+         input {
+            border-radius: 0px;
+            border: none;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e5e5e5;
+         }
+         .form-control:focus {
+            box-shadow: 0 0 0 0rem rgba(0, 123, 255, 0.25) !important;
+         }
+         .form-control:focus {
+            border-bottom: 1px solid #2196f3;
+         }
+         textarea {
+            border: none;
+            border-bottom: 1px solid #e5e5e5;
+            border-radius: 0px;
+         }
+         .button {
+            .btn {
+               margin-bottom: 35px;
+            }
+         }
+      }
+   }
+}
+
+/*-- SCROLL UP --*/
+.scroll-up {
+   position: fixed;
+   right: 35px;
+   bottom: 35px;
+   font-size: 35px;
+   color: #2196f3;
+}
+.scroll-up:hover {
+   color: #2196f3;
+}
